@@ -1,0 +1,195 @@
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* This injects Tailwind's component classes and any component classes registered by plugins.
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* Use custom @apply directives here to inline any existing utility classes into your own custom CSS.
+/* ----------------------------------------------------------------------------------------------------- */
+
+/**
+ * .btn {
+ *   @apply font-bold py-2 px-4 rounded;
+ * }
+ */
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* This injects Tailwind's utility classes and any utility classes registered by plugins.
+/* ----------------------------------------------------------------------------------------------------- */
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.border {
+  border-width: 1px !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.static {
+  position: static !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.resize {
+  resize: both !important;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.transform {
+  --transform-translate-x: 0 !important;
+  --transform-translate-y: 0 !important;
+  --transform-rotate: 0 !important;
+  --transform-skew-x: 0 !important;
+  --transform-skew-y: 0 !important;
+  --transform-scale-x: 1 !important;
+  --transform-scale-y: 1 !important;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y)) !important;
+}
+
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform !important;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.icon-size-16 {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+
+.icon-size-16 svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* Use custom @variant directives here to build them.
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/*  Use this directive to control where Tailwind injects the responsive variations of each utility.
+/*  If omitted, Tailwind will append these classes to the very end of your stylesheet by default.
+/* ----------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 0) and (max-width: 599px) {
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (max-width: 959px) {
+}
+
+@media (max-width: 1279px) {
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 960px) {
+}
+
+@media (min-width: 1280px) {
+}

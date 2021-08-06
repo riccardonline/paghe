@@ -1,0 +1,104 @@
+@import 'src/@treo/styles/treo';
+
+app-faq {
+  width: 100%;
+
+  .faqs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 60px 0 50px 0;
+
+    @include treo-breakpoint('xs') {
+      margin: 60px 0 32px 0;
+    }
+
+    .title-container {
+      max-width: 480px;
+
+      .title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 8px;
+      }
+    }
+
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 32px;
+
+      @include treo-breakpoint('xs') {
+        max-width: 384px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+        max-width: 480px;
+
+        .question {
+          margin: 48px 0 8px 0;
+          font-size: 16px;
+          font-weight: 600;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+
+        .answer {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Theming
+// -----------------------------------------------------------------------------------------------------
+@include treo-theme {
+
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $is-dark: map-get($theme, is-dark);
+
+  app-faq {
+
+    .faqs-section {
+
+      .title-container {
+
+        .subtitle {
+          color: map-get($foreground, secondary-text);
+        }
+      }
+
+      .grid-container {
+
+        .column {
+
+          .answer {
+            color: map-get($foreground, secondary-text);
+          }
+        }
+      }
+
+    }
+  }
+}

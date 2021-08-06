@@ -1,0 +1,52 @@
+<div class="header">
+
+  <div class="container">
+
+    <nav class="navbar">
+
+      <!--Logo-->
+      <a class="navbar-logo" [routerLink]="['/']">
+        <img src="assets/images/logo/Logo_Transparent.png" alt="Paghe logo">
+      </a>
+
+      <div class="navbar-right">
+
+        <!--Menu-->
+        <div class="navbar-menu">
+
+          <div class="navbar-item">
+            <a (click)="onLinkClick('features')">Come funziona</a>
+          </div>
+
+          <div class="navbar-item">
+            <a (click)="onLinkClick('pricing')">Prezzi</a>
+          </div>
+
+          <div class="navbar-item">
+            <a (click)="onLinkClick('faq')">Chi siamo</a>
+          </div>
+
+        </div>
+
+        <!--Login-->
+        <div class="navbar-end">
+
+          <a href="https://app.merito.so" class="login-button">Login</a>
+
+          <a (window:resize)="onResize($event)" [hidden]="mobile" href="http://calendly.com/paghe/informazioni"><button
+              mat-raised-button [color]="'primary'" class="demo-button">Contattaci</button></a>
+          <a (window:resize)="onResize($event)" [hidden]="web" href="http://app.merito.so/welcome"><button
+              mat-raised-button [color]="'primary'" class="demo-button">Contattaci</button></a>
+
+          <!-- <a (window:resize)="onResize($event)" [hidden]="web" href="http://app.merito.so/register_demo"><button
+              mat-raised-button [color]="'primary'" class="demo-button">Contattaci</button></a> -->
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</div>

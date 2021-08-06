@@ -1,0 +1,39 @@
+@import 'src/@treo/styles/treo';
+
+app-home-cta  {
+  display: flex;
+  color: treo-color('white', 50);
+
+  .home-cta__container {
+    background: treo-color('indigo', 600);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 55px 0;
+
+    .home-cta__subtitle {
+      font-size: 14px;
+      text-align: center;
+
+    }
+
+    .home-cta__title {
+      font-size: 34px;
+      font-weight: 700;
+      max-width: 500px;
+      text-align: center;
+      margin: 20px 0 30px;
+
+      @include treo-breakpoint('xs') {
+        font-size: 27px;
+      }
+    }
+
+    .home-cta__button {
+      background-color: treo-color('pink', 600);
+      color: treo-color('white', 50);
+    }
+  }
+}
+

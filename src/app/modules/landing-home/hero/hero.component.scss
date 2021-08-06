@@ -1,0 +1,60 @@
+@import 'src/@treo/styles/treo';
+
+app-hero {
+  background-color: #f7f7fc;
+
+  .hero__wrapper {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include treo-breakpoint('xs') {
+      flex-direction: column;
+      padding: 0 0 40px;
+    }
+
+    @include treo-breakpoint('gt-xs') {
+      align-items: center;
+    }
+
+    .hero__text {
+      max-width: 400px;
+      padding: 40px 30px 40px 0;
+
+      @include treo-breakpoint('lt-xs') {
+        width: 40%;
+      }
+
+      h1.hero__text__title {
+        font-size: 48px;
+        margin: 0 0 20px;
+        font-weight: 700;
+
+        @include treo-breakpoint('lt-md') {
+          font-size: 35px;
+        }
+      }
+
+      .hero__text__description {
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: treo-color('cool-gray', 500);
+      }
+
+      button {
+        margin-right: 10px;
+      }
+    }
+
+    .hero__image {
+
+      img {
+        width: 100%;
+
+        @include treo-breakpoint('gt-xs') {
+          width: 650px;
+        }
+      }
+    }
+  }
+}

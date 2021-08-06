@@ -1,0 +1,81 @@
+<!-- Cards -->
+<div class="cards">
+
+  <!-- Card -->
+  <treo-card>
+
+    <div class="info">
+      <div class="title">Un dipendente</div>
+
+      <div class="description">
+        La formula prevede un prezzo tutto incluso destinata alle sole aziende con un dipendente
+        o collaboratore in forza ed include la nostra assistenza in orari d'ufficio.
+      </div>
+
+      <div class="separator">Il nostro prezzo include:</div>
+
+      <div class="features">
+
+        <div class="column">
+
+          <div class="feature">
+            <mat-icon [svgIcon]="'check'"></mat-icon>
+            <span>Gestione del Libro Unico</span>
+          </div>
+
+          <div class="feature">
+            <mat-icon [svgIcon]="'check'"></mat-icon>
+            <span>Predisposizione F24</span>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+          <div class="feature">
+            <mat-icon [svgIcon]="'check'"></mat-icon>
+            <span>Invio Telematico</span>
+          </div>
+
+          <div class="feature">
+            <mat-icon [svgIcon]="'check'"></mat-icon>
+            <span>Tutti i prospetti contabili</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing">
+
+      <div class="price">
+        <span class="currency">€</span>
+        <span class="amount">29</span>
+        <span class="currency-text">EURO</span>
+      </div>
+
+      <div class="price-details">
+        <span>Per cedolino elaborato,</span>
+        <span>Nessun costo di attivazione</span>
+      </div>
+
+      <a (window:resize)="onResize($event)" [hidden]="mobile" href="http://calendly.com/paghe/informazioni">
+        <button class="cta-button"
+                mat-flat-button
+                [color]="'primary'">
+          Contattaci per iniziare
+        </button>
+      </a>
+      <a (window:resize)="onResize($event)" [hidden]="web" href="http://app.merito.so/welcome">
+        <button class="cta-button"
+                mat-flat-button
+                [color]="'primary'">
+          Contattaci per iniziare
+        </button>
+      </a>
+
+    </div>
+
+  </treo-card>
+
+</div>

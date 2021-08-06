@@ -1,0 +1,175 @@
+@import 'src/@treo/styles/treo';
+
+app-pricing {
+  display: flex;
+
+  .content-layout {
+    position: relative;
+    padding: 32px;
+    align-items: center;
+    overflow: hidden;
+
+    @include treo-breakpoint('xs') {
+      padding: 16px;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 891px;
+
+      path {
+        opacity: 0.1;
+      }
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 !important;
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 64px 0 80px 0;
+
+        @include treo-breakpoint('xs') {
+          margin: 48px 0 56px 0;
+        }
+
+        h1 {
+          font-size: 48px;
+          max-width: 600px;
+          text-align: center;
+          margin: 0;
+
+          @include treo-breakpoint('xs') {
+            font-size: 27px;
+          }
+        }
+
+        h5 {
+          max-width: 480px;
+          margin: 16px 0 0 0;
+          text-align: center;
+        }
+
+        .recurring-selector {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 64px;
+
+          @include treo-breakpoint('xs') {
+            margin-top: 48px;
+          }
+
+          > span {
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+          }
+
+          mat-slide-toggle {
+            margin: 0 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Theming
+// -----------------------------------------------------------------------------------------------------
+@include treo-theme {
+
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $is-dark: map-get($theme, is-dark);
+
+  app-pricing {
+
+    .background {
+
+      path {
+        @if ($is-dark) {
+          fill: treo-color('cool-gray', 800);
+        } @else {
+          fill: treo-color('blue', 300);
+        }
+      }
+    }
+
+    .main {
+
+      .header {
+
+        h5 {
+          color: map-get($foreground, secondary-text);
+        }
+      }
+
+      .recurring-selector {
+
+        &.annual-billing {
+
+          span {
+
+            &:first-child {
+              opacity: 0.5;
+            }
+          }
+        }
+
+        &:not(.annual-billing) {
+
+          span {
+
+            &:last-child {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+
+      .features-section {
+
+        .title-container {
+
+          .subtitle {
+            color: map-get($foreground, secondary-text);
+          }
+        }
+
+        .grid-container {
+
+          .feature {
+
+            .title-container {
+
+              .mat-icon {
+                background: map-get($primary, default);
+                color: map-get($primary, default-contrast);
+              }
+            }
+
+            .description {
+              color: map-get($foreground, secondary-text);
+            }
+          }
+        }
+      }
+    }
+  }
+}

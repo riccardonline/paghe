@@ -1,0 +1,29 @@
+@import 'src/@treo/styles/treo';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+
+  > .content-layout {
+    position: relative;
+    padding: 32px;
+    align-items: center;
+    overflow: hidden;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+
+      > *:not(router-outlet) {
+        position: relative;
+        display: flex;
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,118 @@
+@import 'src/@treo/styles/treo';
+
+.features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 96px;
+
+  @include treo-breakpoint('xs') {
+    margin-top: 40px;
+  }
+
+  .title-container {
+    max-width: 480px;
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 8px;
+    }
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 384px;
+      padding: 64px 40px 0 40px;
+      text-align: center;
+
+      @include treo-breakpoint('xs') {
+        padding: 64px 0 0 0;
+      }
+
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8px;
+
+        .mat-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 6px;
+          margin-bottom: 24px;
+          width: 48px !important;
+          height: 48px !important;
+
+          svg {
+            @include treo-icon-size(24);
+          }
+        }
+
+        div {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Theming
+// -----------------------------------------------------------------------------------------------------
+@include treo-theme {
+
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $primary: map-get($theme, primary);
+
+
+  .features-section {
+
+    .title-container {
+
+      .subtitle {
+        color: map-get($foreground, secondary-text);
+      }
+    }
+
+    .grid-container {
+
+      .feature {
+
+        .title-container {
+
+          .mat-icon {
+            background: map-get($primary, default);
+            color: map-get($primary, default-contrast);
+          }
+        }
+
+        .description {
+          color: map-get($foreground, secondary-text);
+        }
+      }
+    }
+  }
+}

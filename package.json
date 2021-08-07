@@ -2,7 +2,7 @@
   "name": "paghe",
   "version": "1.1.0",
   "license": "https://themeforest.net/licenses/standard",
-  "homepage": "https://paghe.com",
+  "homepage": "https://merito.me",
   "scripts": {
     "ng": "ng",
     "start": "node server",
